@@ -10,7 +10,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.ai" },
-  -- { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.docker.lazydocker" },
   { import = "astrocommunity.editing-support.treesj" },
@@ -21,6 +20,8 @@ return {
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.flash-nvim" },
-  -- { import = "astrocommunity.colorscheme.vscode-nvim" },
-  -- { import = "astrocommunity.recipes.vscode-icons" },
+  -- { import = "astrocommunity.pack.hurl" },
+  { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.completion.supermaven-nvim" },
 }
