@@ -1,5 +1,11 @@
 return {
-  { "jose-elias-alvarez/typescript.nvim", lazy = true }, -- add lsp plugin
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = {
+      treesitter = { ensure_installed = { "javascript", "typescript", "tsx" } },
+    },
+  },
   {
     "AstroNvim/astrolsp",
     ---@type AstroLSPOpts
@@ -12,20 +18,17 @@ return {
       formatting = {
         format_on_save = {
           enabled = false,
-        }
+        },
       },
-      skip_setup = { "tsserver" },
-      setup_handlers = {
-        -- add custom handler
-        tsserver = function(_, opts) require("typescript").setup { server = opts } end,
-      },
+      servers = { "ts_ls" },
     },
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = {
-      ensure_installed = { "typescript-language-server" }, -- automatically install lsp
-    },
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed or {}, {
+        "typescript-language-server",
+      })
+    end,
   },
 }
-
