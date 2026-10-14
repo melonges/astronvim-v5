@@ -28,7 +28,7 @@ return {
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
+        "lua_ls",
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -41,14 +41,6 @@ return {
     },
     -- customize language server configuration passed to `vim.lsp.config`
     -- client specific configuration can also go in `lsp/` in your configuration root (see `:h lsp-config`)
-    ---@diagnostic disable: missing-fields
-    config = {
-      ts_ls = {
-        enabled_features = {
-          signature_help = false,
-        }
-      },
-    },
     -- customize how language servers are attached
     handlers = {
       -- a function with the key `*` modifies the default handler, functions take the server name as the parameter
