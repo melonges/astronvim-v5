@@ -17,4 +17,5 @@ return {
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.media.cord-nvim" }
 }
